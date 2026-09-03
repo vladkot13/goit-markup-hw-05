@@ -552,3 +552,60 @@ portfolio-menu-list {
 .footer-social-link:focus {
   background-color: #31d0aa;
 }
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms ease-in-out;
+}
+
+.modal-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal {
+    background-color: rgba(252, 252, 252, 1);
+    padding-top: 72px;
+    padding-left: 24px;
+    padding-bottom: 24px;
+    padding-right: 24px;
+    border-radius: 4px;
+    width: 408px;
+    height: 584px;
+    overflow-y: auto;
+    gap: 16px;
+}
+
+.modal-header { 
+    font-family: "roboto", medium;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: 2%;
+    color: rgba(46, 47, 66, 1);
+    margin-bottom: 8px;
+    align-items: center;
+
+}
+
+.form-label {
+border: 1px solid #4d5ae5;
+border-radius: 4px;
+width: 360px;
+height: 40px;}
+
+textarea {
+  resize: none;
+}
