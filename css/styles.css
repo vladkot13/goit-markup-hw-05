@@ -564,19 +564,26 @@ portfolio-menu-list {
     display: flex;
     align-items: center;
     justify-content: center;
+    visibility: hidden;
 
     opacity: 0;
     pointer-events: none;
     transition: opacity 250ms ease-in-out;
 }
 
-.modal-overlay {
+.modal-overlay .is-open {
     opacity: 1;
-    pointer-events: auto;
+    visibility: visible;
+    pointer-events: initial;
+   
 }
 
 .modal {
     background-color: rgba(252, 252, 252, 1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding-top: 72px;
     padding-left: 24px;
     padding-bottom: 24px;
@@ -586,6 +593,21 @@ portfolio-menu-list {
     height: 584px;
     overflow-y: auto;
     gap: 16px;
+}
+
+.modal-close {
+    position: absolute;
+    border-radius: 100%;
+    width: 24px;
+    height: 24px;
+    top: 24px;
+    right: 24px;
+    
+    padding: 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-header { 
@@ -600,11 +622,17 @@ portfolio-menu-list {
 
 }
 
+.modal-form {
+
+}
+
 .form-label {
 border: 1px solid #4d5ae5;
 border-radius: 4px;
 width: 360px;
-height: 40px;}
+height: 40px;
+
+}
 
 textarea {
   resize: none;
